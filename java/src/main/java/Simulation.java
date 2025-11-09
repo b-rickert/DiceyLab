@@ -24,8 +24,12 @@ public class Simulation {
         for (int i = 2; i <= 12; i++) {
             int count = bins.getBin(i); 
             double percentage = (double) count / numOfTosses;
-            System.out.printf("%2d : %8d: %.2f\n" , i, count, percentage);
-            
+                System.out.printf("%2d : %8d: %.2f" , i, count, percentage);
+            int numStars = (int)(percentage * 100);
+            for (int s = 0; s < numStars; s++) {
+                System.out.print("*");
+            }
+            System.out.println();
 
         }
     }
